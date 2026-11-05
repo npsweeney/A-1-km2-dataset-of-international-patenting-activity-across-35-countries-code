@@ -1,0 +1,184 @@
+{
+  "regional_areas": {
+    "source": "/data/inputs/TL3_TL2024.zip"
+  },
+  "method_flow": true,
+  "allocation_examples": {
+    "cases": [
+      {
+        "place": "Third Avenue, Harlow, UK",
+        "postcode": "CM19 5AW",
+        "publication": "EP2330909",
+        "patent_year": 2009,
+        "observation_id": "<saved observation ID>",
+        "appln_id": "<linked application ID>",
+        "support_release": "/data/patent_run/batch/05_sampled/support_release.json",
+        "support_inputs": "/data/patent_run/batch/04_support/support_inputs.json",
+        "ghsl_values": "/data/patent_run/batch/05_sampled/ghsl_values.json",
+        "allocation": "/data/patent_run/batch/05_grid/estimated_grid_1km.csv",
+        "source_roster": "/data/patent_run/01_addresses.links.csv"
+      },
+      {
+        "place": "Postcode 42119, Wuppertal, Germany",
+        "postcode": "42119",
+        "publication": "EP2031767",
+        "patent_year": 2008,
+        "observation_id": "<saved observation ID>",
+        "appln_id": "<linked application ID>",
+        "support_release": "/data/patent_run/batch/05_sampled/support_release.json",
+        "support_inputs": "/data/patent_run/batch/04_support/support_inputs.json",
+        "ghsl_values": "/data/patent_run/batch/05_sampled/ghsl_values.json",
+        "allocation": "/data/patent_run/batch/05_grid/estimated_grid_1km.csv",
+        "source_roster": "/data/patent_run/01_addresses.links.csv"
+      },
+      {
+        "place": "Postcode 07974, Murray Hill, New Jersey, USA",
+        "postcode": "07974",
+        "publication": "EP1022776",
+        "patent_year": 2000,
+        "observation_id": "<saved observation ID>",
+        "appln_id": "<linked application ID>",
+        "support_release": "/data/patent_run/batch/05_sampled/support_release.json",
+        "support_inputs": "/data/patent_run/batch/04_support/support_inputs.json",
+        "ghsl_values": "/data/patent_run/batch/05_sampled/ghsl_values.json",
+        "allocation": "/data/patent_run/batch/05_grid/estimated_grid_1km.csv",
+        "source_roster": "/data/patent_run/01_addresses.links.csv"
+      }
+    ]
+  },
+  "country_coverage": {
+    "activity_manifest": "/data/patent_run/06_activity/manifest.json",
+    "source_roster": "/data/patent_run/01_addresses.links.csv",
+    "before_geographic_filter": true,
+    "geocoder_manifest": "/data/patent_run/03_geocoding/run_manifest.json",
+    "geographic_handoff": "/data/patent_run/04_inputs/handoff.json",
+    "postcode_sizes": "/data/patent_run/04_inputs/postcode_sizes.csv"
+  },
+  "internal_validation": {
+    "summary": "/data/patent_run/07_validation/01_internal/summary.json"
+  },
+  "external_comparison": {
+    "activity_manifest": "/data/patent_run/06_activity/manifest.json",
+    "references": {
+      "morrison": "/data/patent_run/07_validation/02_external/morrison",
+      "de_rassenfosse": "/data/patent_run/07_validation/02_external/de_rassenfosse"
+    }
+  },
+  "postcode_sizes": {
+    "source": "/data/patent_run/04_inputs/postcode_sizes.csv",
+    "support_release": "/data/patent_run/05_sampled/support_release.json"
+  },
+  "within_clustering": {
+    "compare_tl3": true,
+    "activity_manifest": "/data/patent_run/06_activity/manifest.json",
+    "boundaries": "/data/oecd_regions.geojson",
+    "tl3_property": "tl3_id",
+    "width_km": 30,
+    "filing_years": [
+      2000,
+      2024
+    ],
+    "tier": "direct_street_pcdb_rg",
+    "locations": [
+      {
+        "region_label": "Manchester",
+        "focus": [
+          -2.2446,
+          53.4808
+        ]
+      },
+      {
+        "region_label": "Manhattan",
+        "focus": [
+          -73.9857,
+          40.7484
+        ],
+        "width_km": 200
+      }
+    ]
+  },
+  "applicant_inventor_grid": {
+    "activity_manifest": "/data/patent_run/06_activity/manifest.json",
+    "boundaries": "/data/oecd_regions.geojson",
+    "filing_years": [
+      2000,
+      2024
+    ],
+    "tier": "direct_street_pcdb_rg",
+    "compare_roles": true
+  },
+  "release_outputs": [
+    {
+      "file": "Weighted panels: applicants_direct.csv, applicants_direct_street.csv, applicants_direct_street_pcdb.csv, applicants_direct_street_pcdb_rg.csv; replace applicants with inventors for inventor files",
+      "unit": "1 km cell--filing year",
+      "contents": "Fractional DOCDB-family counts; four cumulative tiers, with applicant and inventor files separate",
+      "paths": [
+        "/data/patent_run/06_activity/applicants_direct.csv",
+        "/data/patent_run/06_activity/applicants_direct_street.csv",
+        "/data/patent_run/06_activity/applicants_direct_street_pcdb.csv",
+        "/data/patent_run/06_activity/applicants_direct_street_pcdb_rg.csv",
+        "/data/patent_run/06_activity/inventors_direct.csv",
+        "/data/patent_run/06_activity/inventors_direct_street.csv",
+        "/data/patent_run/06_activity/inventors_direct_street_pcdb.csv",
+        "/data/patent_run/06_activity/inventors_direct_street_pcdb_rg.csv"
+      ]
+    },
+    {
+      "file": "Companion panels: same stems with _highest_weight_cell.csv",
+      "unit": "1 km cell--filing year",
+      "contents": "Each allocated address share assigned to its highest-weight cell",
+      "paths": [
+        "/data/patent_run/06_activity/applicants_direct_highest_weight_cell.csv",
+        "/data/patent_run/06_activity/applicants_direct_street_highest_weight_cell.csv",
+        "/data/patent_run/06_activity/applicants_direct_street_pcdb_highest_weight_cell.csv",
+        "/data/patent_run/06_activity/applicants_direct_street_pcdb_rg_highest_weight_cell.csv",
+        "/data/patent_run/06_activity/inventors_direct_highest_weight_cell.csv",
+        "/data/patent_run/06_activity/inventors_direct_street_highest_weight_cell.csv",
+        "/data/patent_run/06_activity/inventors_direct_street_pcdb_highest_weight_cell.csv",
+        "/data/patent_run/06_activity/inventors_direct_street_pcdb_rg_highest_weight_cell.csv"
+      ]
+    },
+    {
+      "file": "grid.json; README.txt",
+      "unit": "Grid and field definitions",
+      "contents": "CRS, origin, indexing and resolutions; column definitions and counting conventions",
+      "paths": [
+        "/data/patent_run/06_activity/manifest.json"
+      ]
+    },
+    {
+      "file": "counts.json; dataset-counts.json",
+      "unit": "Release totals",
+      "contents": "Source-roster conservation totals, panel totals and 35-country dataset counts",
+      "paths": [
+        "/data/patent_run/06_activity/manifest.json"
+      ]
+    },
+    {
+      "file": "street_lengths.csv; street-length-histogram.csv; postcode_sizes.csv; postcode-area-histogram.csv, postcode-area-histogram.png",
+      "unit": "Address allocation",
+      "contents": "Street length, postcode area, construction method and status; histograms of allocated lengths and areas",
+      "paths": [
+        "/data/patent_run/04_inputs/postcode_sizes.csv",
+        "/data/patent_run/05_sampled/support_release.json"
+      ]
+    },
+    {
+      "file": "validation/internal/summary.json; masking-validation.tex",
+      "unit": "Mask type",
+      "contents": "Direct 1 km cell inclusion and weight for street and postcode masks",
+      "paths": [
+        "/data/patent_run/07_validation/01_internal/summary.json"
+      ]
+    },
+    {
+      "file": "validation_summary.json; validation_grid_comparison.csv, in validation/morrison/ and validation/de-rassenfosse/; validation/patent_cell_agreement.json",
+      "unit": "Application--role",
+      "contents": "Reference summaries and grid comparisons; shared-cohort within-application 1 km cell overlap with Morrison and de Rassenfosse",
+      "paths": [
+        "/data/patent_run/07_validation/02_external/morrison/summary.json",
+        "/data/patent_run/07_validation/02_external/de_rassenfosse/summary.json"
+      ]
+    }
+  ]
+}

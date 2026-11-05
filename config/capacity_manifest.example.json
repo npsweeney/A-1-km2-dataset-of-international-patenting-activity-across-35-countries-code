@@ -1,0 +1,39 @@
+{
+  "schema_version": "local-nominatim-capacity-v1",
+  "passed": false,
+  "selected_client_concurrency": null,
+  "delay_seconds": 0,
+  "service_identity": {
+    "endpoint": "http://localhost:8080",
+    "database_system_identifier": "COPY_FROM_VERIFIED_SERVICE_MANIFEST",
+    "data_revision": "full-planet-20260517-gb-postcodes-20261014-v1",
+    "version": "5.3.3"
+  },
+  "resources": {
+    "allocated_cpus": 16,
+    "allocated_memory_gb": 64,
+    "observed_cpu_usage": null,
+    "observed_memory_gb": null
+  },
+  "api_workers": 8,
+  "database_connections": {
+    "pool_per_worker": 2,
+    "max_connections": 64
+  },
+  "queues": {
+    "max_in_flight": 8,
+    "admission_per_worker": 32,
+    "backlog": 64
+  },
+  "request_budgets": {
+    "per_benchmark": 20000,
+    "geography_run": 30003000
+  },
+  "cache_writers": 1,
+  "timeouts": {
+    "version": "private-nominatim-http31-sql30-v1",
+    "http_seconds": 31,
+    "sql_seconds": 30
+  },
+  "benchmarks": []
+}

@@ -1,0 +1,50 @@
+\begingroup
+\definecolor{FlowPurple}{HTML}{46515B}
+\definecolor{FlowRed}{HTML}{707070}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+  box/.style={draw=FlowPurple,rounded corners=2pt,fill=FlowPurple!4,
+    align=center,inner sep=5pt,text=black,font=\sffamily\fontsize{7}{8.5}\selectfont,
+    minimum height=0.48cm},
+  main/.style={box,fill=FlowPurple,text=white,font=\sffamily\fontsize{7}{8.5}\selectfont\bfseries,text width=3.5cm},
+  class/.style={box,fill=white,font=\sffamily\fontsize{7}{8.5}\selectfont\bfseries,text width=2.2cm},
+  detail/.style={box,text width=2.2cm,minimum height=0.9cm},
+  arrow/.style={-{Latex[length=1.8mm,width=1.4mm]},draw=FlowPurple,
+    line width=0.7pt,shorten <=2pt,shorten >=3pt},
+  label/.style={font=\sffamily\fontsize{6}{7}\selectfont,fill=white,inner sep=2pt}]
+  \node[main] (address) at (0,0) {Initial REGPAT address};
+  \node[box,text width=3.5cm] (geocoder) at (0,-0.85) {Staged geocoder};
+  \node[box,text width=3.5cm] (check) at (0,-1.70) {Same TL3 as REGPAT?};
+  \draw[arrow] (address) -- (geocoder);
+  \draw[arrow] (geocoder) -- (check);
+  \node[box,draw=FlowRed,text=FlowRed,text width=2.2cm]
+    (review) at (4.5,-1.70) {Exclude and review};
+  \draw[arrow,draw=FlowRed] (check.east) -- node[label,above]{No} (review.west);
+  \node[class] (direct) at (-4.5,-3.05) {Direct address};
+  \node[class] (street) at (-1.5,-3.05) {Street};
+  \node[class] (postcode) at (1.5,-3.05) {Postcode};
+  \node[class] (locality) at (4.5,-3.05) {Locality or region};
+  \draw[FlowPurple,line width=0.7pt] (check.south) -- node[label,right]{Yes: supported precision} (0,-2.4);
+  \draw[FlowPurple,line width=0.7pt] (-4.5,-2.4) -- (4.5,-2.4);
+  \foreach \n in {direct,street,postcode,locality}
+    \draw[arrow,shorten <=0pt] (\n.north |- 0,-2.4) -- (\n.north);
+  \node[detail] (coordinate) at (-4.5,-4.40) {Coordinate};
+  \node[detail] (osm) at (-1.5,-4.40) {OSM geometry\\matched to 100 m cells};
+  \node[detail] (flood) at (1.5,-4.40) {Mapped polygon or\\1 km inferred area\\($\leq50$ km$^2$)};
+  \node[detail,draw=FlowRed,text=FlowRed] (discard) at (4.5,-4.40) {Exclude from\\fine-scale allocation};
+  \draw[arrow] (direct) -- (coordinate);
+  \draw[arrow] (street) -- (osm);
+  \draw[arrow] (postcode) -- (flood);
+  \draw[arrow,draw=FlowRed] (locality) -- (discard);
+  \node[box,text width=5.5cm,minimum height=0.75cm] (built) at (0,-6.0)
+    {Map onto 100 m built-environment cells\\for the relevant year};
+  \draw[arrow] (osm.south) -- (osm.south |- built.north);
+  \draw[arrow] (flood.south) -- (flood.south |- built.north);
+  \node[main,text width=5.5cm,minimum height=0.6cm] (final) at (0,-7.25)
+    {Estimates on the 1 km grid};
+  \draw[arrow] (built) -- node[label,right,xshift=3pt]{Weighted allocation} (final);
+  \draw[arrow] (coordinate.south) |- (final.west);
+  \node[box,text width=2.2cm] (exact) at (-4.5,-6.0) {Keep exact\\coordinate};
+\end{tikzpicture}%
+}
+\endgroup

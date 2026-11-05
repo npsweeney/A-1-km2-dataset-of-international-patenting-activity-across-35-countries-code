@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "gpd-ghsl-grid-contract-v1",
+  "gridVersion": "gpd-ghsl-mollweide-100m-1km-v2",
+  "ghslRegistryVersion": "GHS-BUILT-S-R2023A",
+  "crs": "ESRI:54009",
+  "originX": -18041000,
+  "originY": 9000000,
+  "extent": [
+    -18041000,
+    -9000000,
+    18041000,
+    9000000
+  ],
+  "cellIndexing": "zero_based_row_column",
+  "resolution100m": 100,
+  "resolution1km": 1000,
+  "parentMapping": "parent_row=floor(row_100m/10);parent_col=floor(col_100m/10)",
+  "epochAlignmentRule": "every selected epoch uses this exact CRS, origin, extent and indexing without reprojection"
+}

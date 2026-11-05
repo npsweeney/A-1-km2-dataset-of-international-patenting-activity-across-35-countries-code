@@ -1,0 +1,34 @@
+{
+  "schema_version": "gpd_stage_a_service_identity_v1",
+  "endpoint": "http://localhost:8080",
+  "max_queue": 10000,
+  "request_budget": 30003000,
+  "max_attempts": 2,
+  "retry_backoff_ms": 0,
+  "version": "5.3.3",
+  "source_label": "Full OSM planet 2026-05-17 with GB postcode supplement 2026-10-14",
+  "osm_data_updated": "2026-05-17T23:59:59Z",
+  "import_style": "full",
+  "postcode_supplement": {
+    "country": "GB",
+    "url": "https://nominatim.org/data/gb_postcodes_with_ni.csv.gz",
+    "gb_source": "Ordnance Survey Code-Point Open",
+    "ni_source": "Food Hygiene Ratings Scheme aggregated postcode centres"
+  },
+  "point_tl3_boundaries": {
+    "path": "/data/oecd_regions.geojson",
+    "code_property": "tl3_id"
+  },
+  "client_workers": 8,
+  "max_in_flight": 8,
+  "delay_seconds": 0,
+  "response_cache_dir": "/data/patent_run/geographic-cache",
+  "database_system_identifier": "COPY_FROM_VERIFIED_SERVICE_MANIFEST",
+  "data_revision": "full-planet-20260517-gb-postcodes-20261014-v1",
+  "allocated_cpus": 16,
+  "allocated_memory_gb": 64,
+  "timeout_version": "private-nominatim-http31-sql30-v1",
+  "capacity_manifest": "/data/nominatim_capacity.json",
+  "query_timeout_seconds": 31,
+  "statement_timeout_ms": 30000
+}

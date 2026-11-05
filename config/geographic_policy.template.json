@@ -1,0 +1,12 @@
+{
+  "schema_version": "imputation_stage_a_policy_v1",
+  "request_budget": 30003000,
+  "max_cells_per_observation": 225,
+  "max_queue": 10000,
+  "max_attempts": 2,
+  "retry_backoff_ms": 0,
+  "query_timeout_seconds": 31,
+  "max_postcode_cells_per_observation": 5000,
+  "postcode_boundary_mode": "polygon_first_1km",
+  "max_postcode_area_km2": 50
+}

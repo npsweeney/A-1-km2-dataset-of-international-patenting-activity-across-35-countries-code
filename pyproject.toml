@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patent-code"
+version = "0.2.2"
+license = {file = "LICENSE"}
+description = "International patenting activity code"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32,<3"]
+
+[project.optional-dependencies]
+nominatim = ["nominatim-api==5.3.3", "nominatim-db==5.3.3", "uvicorn>=0.30,<1", "starlette>=0.40,<2"]
+metadata = ["duckdb>=1.0,<2"]
+raster = ["rasterio>=1.3", "shapely>=2", "numpy>=1.24", "pyshp>=2.3", "ijson>=3.3,<4"]
+validation = ["pyproj>=3.6", "ijson>=3.3,<4"]
+
+[project.scripts]
+patent-code = "run:main"
+
+[tool.setuptools]
+py-modules = ["run"]
+packages = ["ingest", "cleaning", "geocoding", "geocoding.audit", "geocoding.validation", "geocoding.geocoder", "geographic_uncertainty", "weighting", "aggregation", "validation", "figures_tables", "ingest.patent_metadata"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+ingest = "src/01_ingest"
+cleaning = "src/02_cleaning"
+geocoding = "src/03_geocoding"
+geographic_uncertainty = "src/04_geographic_uncertainty"
+weighting = "src/05_weighting"
+aggregation = "src/06_aggregation"
+validation = "src/07_validation"
+figures_tables = "src/08_figures_tables"
+
+[tool.setuptools.package-data]
+validation = ["01_internal/*.py", "02_external/*.py"]
+figures_tables = ["renderers/*.R", "assets/*.tex"]

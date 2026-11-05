@@ -1,0 +1,87 @@
+{
+  "schema_version": "gpd_ghsl_built_s_100m_source_manifest_v1",
+  "product": "GHS-BUILT-S",
+  "release": "R2023A",
+  "resolution_m": 100,
+  "crs": "ESRI:54009",
+  "registry_scope": "through_2025",
+  "assets": [
+    {
+      "epoch": 1975,
+      "archive_filename": "GHS_BUILT_S_E1975_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E1975_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E1975_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E1975_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E1975_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 1980,
+      "archive_filename": "GHS_BUILT_S_E1980_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E1980_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E1980_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E1980_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E1980_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 1985,
+      "archive_filename": "GHS_BUILT_S_E1985_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E1985_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E1985_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E1985_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E1985_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 1990,
+      "archive_filename": "GHS_BUILT_S_E1990_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E1990_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E1990_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E1990_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E1990_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 1995,
+      "archive_filename": "GHS_BUILT_S_E1995_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E1995_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E1995_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E1995_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E1995_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 2000,
+      "archive_filename": "GHS_BUILT_S_E2000_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E2000_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2000_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E2000_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E2000_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 2005,
+      "archive_filename": "GHS_BUILT_S_E2005_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E2005_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2005_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E2005_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E2005_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 2010,
+      "archive_filename": "GHS_BUILT_S_E2010_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E2010_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2010_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E2010_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E2010_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 2015,
+      "archive_filename": "GHS_BUILT_S_E2015_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E2015_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2015_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E2015_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E2015_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 2020,
+      "archive_filename": "GHS_BUILT_S_E2020_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E2020_GLOBE_R2023A_54009_100_V1_0.tif"
+    },
+    {
+      "epoch": 2025,
+      "archive_filename": "GHS_BUILT_S_E2025_GLOBE_R2023A_54009_100_V1_0.zip",
+      "archive_path": "/absolute/path/GHS_BUILT_S_E2025_GLOBE_R2023A_54009_100_V1_0.zip",
+      "url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_BUILT_S_GLOBE_R2023A/GHS_BUILT_S_E2025_GLOBE_R2023A_54009_100/V1-0/GHS_BUILT_S_E2025_GLOBE_R2023A_54009_100_V1_0.zip",
+      "raster_path": "/absolute/path/GHS_BUILT_S_E2025_GLOBE_R2023A_54009_100_V1_0.tif"
+    }
+  ]
+}

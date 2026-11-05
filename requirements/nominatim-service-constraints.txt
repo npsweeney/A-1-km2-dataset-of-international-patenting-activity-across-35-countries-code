@@ -1,0 +1,7 @@
+# Tested isolated Nominatim service (Python 3.12.13); system libraries are separate
+nominatim-api==5.3.3
+nominatim-db==5.3.3
+uvicorn==0.48.0
+starlette==1.2.0
+psycopg==3.3.4
+SQLAlchemy==2.0.50
